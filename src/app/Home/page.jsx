@@ -20,7 +20,7 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
-const page = () => {
+const Page = () => {
   const imageStyle = {
     filter: 'drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.10))',
     /* Other styling for your image */
@@ -358,4 +358,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
