@@ -28,9 +28,17 @@ const Page = () => {
 
   const [navOpen, setNavOpen] = useState()
 
+  const [data, setdata] = useState()
+
   const toggleNav = () => {
     setNavOpen(!navOpen)
   }
+
+  const toggleData = () => {
+    setdata(!data)
+  }
+
+  
 
   return (
     <>
@@ -58,32 +66,31 @@ const Page = () => {
 
               </ul>
             </div>
-            <div id="sideNav" className='md:flex hidden justify-around items-center w-[100%] mt-5'>
+            <div id="sideNav" className='md:flex z-20 hidden justify-around items-center w-[100%] mt-5'>
               <ul className='flex justify-center items-center flex-wrap gap-1 md:gap-5 '>
-                <li className='font-semibold text-sm hover:text-purple-900 hover:border-t-2 hover:border-purple-900'>Home</li>
-                <li className='font-semibold text-sm hover:text-purple-900 hover:border-t-2 hover:border-purple-900'>About Us</li>
-                <li className='font-semibold text-sm hover:text-purple-900 hover:border-t-2 hover:border-purple-900'>Race Categories</li>
-                <li className='font-semibold text-sm hover:text-purple-900 hover:border-t-2 hover:border-purple-900'>Upcoming Events</li>
-                <li className='font-semibold text-sm hover:text-purple-900 hover:border-t-2 hover:border-purple-900'>Contact Us</li>
+                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Home</li>
+                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>About Us</li>
+                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Race Categories</li>
+                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Upcoming Events</li>
+                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Contact Us</li>
               </ul>
               <button className='border rounded-md border-purple-900 p-1 px-2 text-purple-900 hover:bg-purple-900 hover:text-white'>Register</button>
             </div>
           </nav>
-
-          <div id="subNav" className={`${navOpen ? "block" : "hidden"} w-[50%] h-[50vh] text-right absolute top-18 right-0 bg-white/75 z-20 flex justify-center items-center`}>
-            <ul className='w-[100%] flex justify-center items-end mr-2 flex-col'>
-              <li className='font-semibold text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900'>Home</li>
-              <li className='font-semibold text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900'>About Us</li>
-              <li className='font-semibold text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900'>Race Categories</li>
-              <li className='font-semibold text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900'>Upcoming Events</li>
-              <li className='font-semibold text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900'>Contact Us</li>
-              <li className='flex justify-center items-center text-lg my-2 text-purple-900 hover:border-b-2 border-purple-900'><FaFacebookF /> <span className='font-semibold text-sm'>Facebook</span></li>
-              <li className='flex justify-center items-center text-lg my-2 text-purple-900 hover:border-b-2 border-purple-900'><FaTwitter /> <span className='font-semibold text-sm'>Twitter</span></li>
-              <li className='flex justify-center items-center text-lg my-2 text-purple-900 hover:border-b-2 border-purple-900'><AiFillInstagram /> <span className='font-semibold text-sm'>Instagram</span></li>
+          <div id="subNav" className={`${navOpen ? "block" : "hidden"} md:hidden w-[100%] h-[60vh] text-right absolute top-18 right-0 bg-white/85 z-20 flex justify-center items-center`}>
+            <ul className='w-[100%] flex justify-center items-center mr-2 flex-col'>
+              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Home</li>
+              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>About Us</li>
+              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Race Categories</li>
+              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Upcoming Events</li>
+              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Contact Us</li>
+              <li className='flex justify-center items-center text-lg hover:animate-bounce my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaFacebookF /> <span className='font-semibold text-sm'>Facebook</span></li>
+              <li className='flex justify-center items-center text-lg hover:animate-bounce my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaTwitter /> <span className='font-semibold text-sm'>Twitter</span></li>
+              <li className='flex justify-center items-center text-lg hover:animate-bounce my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'><AiFillInstagram /> <span className='font-semibold text-sm'>Instagram</span></li>
             </ul>
           </div>
 
-          <div className='w-[100%] my-5 flex justify-center items-center relative'>
+          <div className='w-[100%] md:my-16 flex justify-center items-center relative'>
             <div className='flex justify-center items-center w-[90%] md:h-[90vh] h-[50vh]'>
               <Swiper
                 spaceBetween={38}
@@ -116,10 +123,10 @@ const Page = () => {
         </main>
 
 
-        <div className=' md:h-[130vh] w-[100%] text-zinc-800 flex justify-evenly items-center flex-col'>
+        <div className=' w-[100%] text-zinc-800 flex justify-evenly items-center flex-col'>
           <h1 className='md:text-4xl text-2xl mt-2 font-bold text-center'>Reasons to run with us!</h1>
           <div className='flex justify-center items-center flex-wrap my-10 w-[100%]'>
-            <div className='w-[45%] md:w-[30%] text-center m-1 md:m-2'>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img1.png" alt="" height={300} width={300} className='w-[3vh] md:w-[4vh] h-[6vh] md:h-[8vh]' />
                 <Image src="/img1.png" alt="" height={1000} width={1000} className='md:w-[5vh] w-[4vh]' />
@@ -130,7 +137,7 @@ const Page = () => {
               <p className='capitalize text-sm md:my-1 text-zinc-600'>journey with our dedicated water </p>
               <p className='capitalize text-sm md:my-1 text-zinc-600'>bottle support stations.</p>
             </div>
-            <div className='w-[45%] md:w-[30%] text-center m-1 md:m-2'>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img2.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
@@ -140,7 +147,7 @@ const Page = () => {
               <p className='capitalize text-sm md:my-1 text-zinc-600'>streamlined quick </p>
               <p className='capitalize text-sm md:my-1 text-zinc-600'>registration process.</p>
             </div>
-            <div className='w-[45%] md:w-[30%] text-center m-1 md:m-2'>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img3.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
@@ -150,7 +157,7 @@ const Page = () => {
               <p className='capitalize text-sm md:my-1 text-zinc-600'>journey with our dedicated water </p>
               <p className='capitalize text-sm md:my-1 text-zinc-600'>bottle support stations.</p>
             </div>
-            <div className='w-[45%] md:w-[30%] text-center m-1 md:m-2'>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img4.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
@@ -160,7 +167,7 @@ const Page = () => {
               <p className='capitalize md:my-1 text-sm text-zinc-600'>journey with our dedicated water </p>
               <p className='capitalize md:my-1 text-sm text-zinc-600'>bottle support stations.</p>
             </div>
-            <div className='w-[45%] md:w-[30%] text-center m-1 md:m-2'>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img5.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
@@ -170,7 +177,7 @@ const Page = () => {
               <p className='capitalize md:my-1 text-sm text-zinc-600'>journey with our dedicated water </p>
               <p className='capitalize md:my-1 text-sm text-zinc-600'>bottle support stations.</p>
             </div>
-            <div className='w-[45%] md:w-[30%] text-center m-1 md:m-2'>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img6.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
@@ -181,8 +188,59 @@ const Page = () => {
               <p className='capitalize md:my-1 text-sm text-zinc-600'>bottle support stations.</p>
             </div>
           </div>
-          <span className='text-right w-[80%]'>
-            <button className='text-purple-900 text-lg md:text-xl font-semibold hover:underline'>See more</button>
+
+          <div className={`${data ? "block" : "hidden"} flex justify-center items-center flex-wrap my-10 w-[100%]`}>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
+              <span className='flex justify-center items-end'>
+                <Image src="/img7.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
+              </span>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Finishing badge</h2>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>Prepare for race day with </p>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>confidence through our </p>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>medical counseling services.</p>
+            </div>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
+              <span className='flex justify-center items-end'>
+                <Image src="/img8.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
+              </span>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Zumba Warmup</h2>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>Prepare for race day with </p>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>confidence through our</p>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>medical counseling services.</p>
+            </div>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
+              <span className='flex justify-center items-end'>
+                <Image src="/img9.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
+              </span>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Career consultation</h2>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>Prepare for race day with </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>confidence through our</p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>medical counseling services.</p>
+            </div>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
+              <span className='flex justify-center items-end'>
+                <Image src="/img10.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
+              </span>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Luck Draw hamper</h2>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>All registered participants have </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>a chance to win exclusive gifts</p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>through our lucky draw.</p>
+            </div>
+            <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
+              <span className='flex justify-center items-end'>
+                <Image src="/img11.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
+              </span>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>BIB Number</h2>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>Prepare for race day with </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>confidence through our</p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>medical counseling services.</p>
+            </div>
+          </div>
+          
+          <span className='text-center mb-4 w-[80%]'>
+            <button onClick={toggleData} className='text-purple-900 text-lg md:text-xl font-semibold hover:animate-bounce my-2 hover:border-b-2 border-purple-900'>
+              {data ? "See less" : "See more"}
+            </button>
           </span>
         </div>
 
@@ -202,11 +260,11 @@ const Page = () => {
             <div className='md:w-[50%] w-[90%] flex justify-center items-center '>
               <Image src="/registerImg.png" alt="" width={1000} height={1000} className='md:w-[37%] w-[90%] md:h-auto h-[90%] md:mt-10 mt-20 absolute top-0' style={imageStyle} />
             </div>
-            <div className='w-[90%] md:w-[35%] md:h-[100%] h-[120%] z-20 mt-40 bg-white/35 md:bg-gradient-to-br from-blue-300  via-orange-200  to-red-300 rounded-xl flex justify-center items-center'>
-              {/* <div className='h-[100%]'>
-                <Image src="/rainbow.png" alt="" width={1000} height={1000} className='h-[100%] w-[100%]'/>
-              </div> */}
-              <div className='flex justify-start items-center flex-col'>
+            <div className='relative w-[90%] md:w-[35%] md:h-[100%] h-[120%] z-20 md:mt-40 mt-5 rounded-xl flex justify-center items-center'>
+              <div className='h-[100%]'>
+                <Image src="/Overlay.png" alt="" width={1000} height={1000} className='md:h-[100%] h-[110%] w-[100%]'/>
+              </div>
+              <div className='flex justify-start items-center flex-col absolute top-0 left-0'>
                 <h1 className='md:text-4xl text-2xl mt-2 font-bold text-zinc-800'>Registeration form</h1>
                 <div className='flex justify-center items-center flex-col py-4 w-[80%]'>
                   <input type="text" name="" id="" placeholder='Name' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none mt-10 text-zinc-950' />
