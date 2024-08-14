@@ -14,7 +14,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// import './styles.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -22,17 +21,19 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Page = () => {
   const imageStyle = {
-    filter: 'drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.10))',
+    filter: 'drop-shadow(10px 10px 10px rgba(0, 0, 0, .8))'
     /* Other styling for your image */
   };
 
   const [navOpen, setNavOpen] = useState()
 
-  const [data, setdata] = useState()
-
+  
   const toggleNav = () => {
     setNavOpen(!navOpen)
   }
+
+  
+  const [data, setdata] = useState()
 
   const toggleData = () => {
     setdata(!data)
@@ -77,16 +78,16 @@ const Page = () => {
               <button className='border rounded-md border-purple-900 p-1 px-2 text-purple-900 hover:bg-purple-900 hover:text-white'>Register</button>
             </div>
           </nav>
-          <div id="subNav" className={`${navOpen ? "block" : "hidden"} md:hidden w-[100%] h-[60vh] text-right absolute top-18 right-0 bg-white/85 z-20 flex justify-center items-center`}>
+          <div id="subNav" className={`${navOpen ? "block" : "hidden"} md:hidden w-[100%] h-[70vh] text-right absolute top-18 right-0 bg-white/85 z-20 flex justify-center items-start`}>
             <ul className='w-[100%] flex justify-center items-center mr-2 flex-col'>
-              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Home</li>
-              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>About Us</li>
-              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Race Categories</li>
-              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Upcoming Events</li>
-              <li className='font-semibold hover:animate-bounce text-sm my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Contact Us</li>
-              <li className='flex justify-center items-center text-lg hover:animate-bounce my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaFacebookF /> <span className='font-semibold text-sm'>Facebook</span></li>
-              <li className='flex justify-center items-center text-lg hover:animate-bounce my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaTwitter /> <span className='font-semibold text-sm'>Twitter</span></li>
-              <li className='flex justify-center items-center text-lg hover:animate-bounce my-2 text-purple-900 hover:border-b-2 border-purple-900 p-1'><AiFillInstagram /> <span className='font-semibold text-sm'>Instagram</span></li>
+              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Home</li>
+              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>About Us</li>
+              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Race Categories</li>
+              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Upcoming Events</li>
+              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Contact Us</li>
+              <li className='flex justify-center items-center text-lg hover:animate-bounce my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaFacebookF /> <span className='font-semibold text-sm'>Facebook</span></li>
+              <li className='flex justify-center items-center text-lg hover:animate-bounce my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaTwitter /> <span className='font-semibold text-sm'>Twitter</span></li>
+              <li className='flex justify-center items-center text-lg hover:animate-bounce my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'><AiFillInstagram /> <span className='font-semibold text-sm'>Instagram</span></li>
             </ul>
           </div>
 
@@ -258,7 +259,7 @@ const Page = () => {
           </div>
           <div className='w-[100%] h-[62%] flex justify-center items-center relative md:flex-row flex-col'>
             <div className='md:w-[50%] w-[90%] flex justify-center items-center '>
-              <Image src="/registerImg.png" alt="" width={1000} height={1000} className='md:w-[37%] w-[90%] md:h-auto h-[90%] md:mt-10 mt-20 absolute top-0' style={imageStyle} />
+              <Image src="/registerImg.png" alt="" width={1000} height={1000} className='md:w-[75vh] w-[90%] md:h-auto h-[90%] md:mt-10 mt-20 absolute top-0' style={imageStyle} />
             </div>
             <div className='relative w-[90%] md:w-[35%] md:h-[100%] h-[120%] z-20 md:mt-40 mt-5 rounded-xl flex justify-center items-center'>
               <div className='h-[100%]'>
@@ -346,55 +347,55 @@ const Page = () => {
           <div className='md:h-[25vh] h-[20vh] w-[100%] bg-purple-900 flex justify-center items-center flex-col' style={{ clipPath: "polygon(100% 0%, 100% 75%, 50% 100%, 0% 75% , 0 0)" }}>
             <h1 className='md:text-4xl text-2xl font-bold'>How To Apply</h1>
           </div>
-          <div className='md:h-[60%] h-[80%] w-[100%] relative flex justify-evenly items-center text-zinc-800 md:flex-row flex-col'>
+          <div className='md:h-[60%] h-[100%] w-[100%] relative flex justify-evenly items-center text-zinc-800 md:flex-row flex-col'>
             <div className='flex justify-between items-center flex-col md:h-[70%] h-[45%] z-20 md:w-[30%] w-[85%]'>
-              <span className='h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-l-4 border-l-8 border-purple-900'>
-                <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[8vh] md:h-[8vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>1</span>
+              <span className='h-auto m-2 relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-l-4 border-l-8 border-purple-900'>
+                <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>1</span>
                 <div className='flex justify-center items-center flex-col gap-2 pt-5'>
-                  <span className='flex justify-center items-center gap-2'>
-                    <h1 className='md:text-2xl text-md font-bold text-zinc-900'>Visit our Registration Page: </h1>
-                    <Image src="/apply1.png" alt="" height={300} width={300} className='md:w-[12%] w-[10%]' />
+                  <span className='flex justify-center items-center gap-2 pl-7'>
+                    <h1 className='md:text-xl text-md font-bold text-zinc-900'>Visit our Registration Page: </h1>
+                    <Image src="/apply1.png" alt="" height={300} width={300} className='md:w-[50px] w-[40px]' />
                   </span>
-                  <p className='w-[80%] text-center md:text-lg text-sm'>Go to the Registration Page registration page link on our website and fill the form.</p>
+                  <p className='w-[80%] text-center md:text-md text-sm'>Go to the Registration Page registration page link on our website and fill the form.</p>
                 </div>
               </span>
               <span className='h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-l-4 border-l-8 border-purple-900'>
-                <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[8vh] md:h-[8vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>2</span>
+                <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>2</span>
                 <div className='flex justify-center items-center flex-col gap-2 pt-5'>
-                  <span className='flex justify-center items-center gap-2'>
-                    <h1 className='md:text-2xl text-md font-bold text-zinc-900'>Select Your Race Category </h1>
-                    <Image src="/apply3.png" alt="" height={300} width={300} className='md:w-[12%] w-[10%]' />
+                  <span className='flex justify-center items-center gap-2 pl-7'>
+                    <h1 className='md:text-xl text-md font-bold text-zinc-900'>Select Your Race Category </h1>
+                    <Image src="/apply3.png" alt="" height={300} width={300} className='md:w-[50px] w-[40px]' />
                   </span>
-                  <p className='w-[80%] text-center md:text-lg text-sm'>Choose the race category you wish to participate in</p>
+                  <p className='w-[80%] text-center md:text-md text-sm'>Choose the race category you wish to participate in</p>
                 </div>
               </span>
             </div>
             <Image src="/footerImg.png" alt="" height={300} width={300} className='rounded-3xl md:w-[25%] w-[90%] h-[100%] md:h-auto md:relative absolute top-0 z-10' />
             <div className='flex justify-between items-center flex-col md:h-[70%] h-[45%] z-20 md:w-[30%] w-[85%]'>
               <span className='h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-r-4 border-l-8 md:border-l-0 border-purple-900'>
-                <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[8vh] md:h-[8vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>3</span>
+                <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>3</span>
                 <div className='flex justify-center items-center flex-col gap-3 pt-5'>
-                  <span className='flex justify-center items-center gap-2'>
-                    <h1 className='md:text-2xl text-md font-bold text-zinc-900'>Make Payment </h1>
-                    <Image src="/apply2.png" alt="" height={300} width={300} className='md:w-[20%] w-[16%]' />
+                  <span className='flex justify-center items-center gap-2 pl-7'>
+                    <h1 className='md:text-xl text-md font-bold text-zinc-900'>Make Payment </h1>
+                    <Image src="/apply2.png" alt="" height={300} width={300} className='md:w-[50px] w-[40px] h-[40px]' />
                   </span>
-                  <p className='w-[80%] text-center md:text-lg text-sm'>Review registration fee, Select your payment method.</p>
+                  <p className='w-[80%] text-center md:text-md text-sm'>Review registration fee, Select your payment method.</p>
                 </div>
               </span>
               <span className='h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-r-4 border-l-8 md:border-l-0 border-purple-900'>
-                <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[8vh] md:h-[8vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>4</span>
+                <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>4</span>
                 <div className='flex justify-center items-center flex-col gap-3 pt-5'>
-                  <span className='flex justify-center items-center gap-2'>
-                    <h1 className='md:text-2xl text-md font-bold text-zinc-900'>Get your BIB No.  </h1>
-                    <Image src="/apply4.png" alt="" height={300} width={300} className='md:w-[20%] w-[16%]' />
+                  <span className='flex justify-center items-center gap-2 pl-7'>
+                    <h1 className='md:text-xl text-md font-bold text-zinc-900'>Get your BIB No.  </h1>
+                    <Image src="/apply4.png" alt="" height={300} width={300} className='md:w-[50px] w-[40px] h-[40px]' />
                   </span>
-                  <p className='w-[80%] text-center md:text-lg text-sm'>Get you BIB No. & Participate in Race.</p>
+                  <p className='w-[80%] text-center md:text-md text-sm'>Get you BIB No. & Participate in Race.</p>
                 </div>
               </span>
             </div>
           </div>
           {/* <hr className='shadow-md  border border-fuchsia-800'/> */}
-          <div className='h-[20%] w-[100%] bg-white shadow-inner shadow-fuchsia-900'>
+          <div className='w-[100%] bg-white shadow-inner shadow-fuchsia-900'>
             <ul className='flex justify-center items-center gap-2 text-purple-900 pt-5'>
               <li className='text-sm font-semibold text-center'>
                 <p>Powered By Unity</p>
@@ -409,6 +410,7 @@ const Page = () => {
               <li className='font-semibold border-r-2 border-zinc-700 pr-4'>Upcoming Events</li>
               <li className='font-semibold border-zinc-700 pr-4'>Contact Us</li>
             </ul>
+            <h2 className='font-semibold text-lg text-zinc-800 text-center my-6 pb-3'>Venture by Deshmukh & Gholap</h2>
           </div>
         </div>
       </div>
