@@ -1,13 +1,11 @@
 "use client"
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
-import { FaTwitter, FaFacebookF } from "react-icons/fa";
-import { FaXmark, FaBars } from "react-icons/fa6";
-import { AiFillInstagram } from "react-icons/ai";
 import { CiCalendar, CiLocationOn } from "react-icons/ci";
-
-
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import Navbar from "@/components/Navbar/page.jsx"
+import Footer from "@/components/Footer/page.jsx"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,71 +23,18 @@ const Page = () => {
     /* Other styling for your image */
   };
 
-  const [navOpen, setNavOpen] = useState()
-
-  
-  const toggleNav = () => {
-    setNavOpen(!navOpen)
-  }
-
-  
   const [data, setdata] = useState()
 
   const toggleData = () => {
     setdata(!data)
   }
 
-  
-
   return (
     <>
       <div className='bg-white'>
-        <main className='md:h-[130vh] h-[60vh] w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 95%, 50% 100%, 0% 95% , 0 0)" }}>
-          <nav className='flex justify-center items-center flex-col'>
-            <div id="navBar" className=' text-purple-900 flex justify-around items-center h-[10vh] shadow shadow-fuchsia-900 w-[100%] gap-1 md:gap-80'>
-              <ul className='flex justify-center items-center gap-2'>
-                <li className='md:text-sm text-xs font-semibold text-center'>
-                  <p>Powered By Unity</p>
-                  <p>Driven By Trust</p>
-                </li>
-                <li><Image src="/logo.png" alt="" width={200} height={200} className='md:w-[10vh] w-[8vh] ' /></li>
-              </ul>
-              <ul className='flex justify-center items-center gap-1 md:gap-4'>
-                <li className='text-lg md:block hidden '><FaFacebookF /></li>
-                <li className='text-lg md:block hidden '><FaTwitter /></li>
-                <li className='text-lg md:block hidden '><AiFillInstagram /></li>
-                <button className='border text-sm rounded-md border-purple-900 p-1 px-2 hover:bg-purple-900 hover:text-white'>LOGIN</button>
-                <button className='border text-sm rounded-md border-purple-900 p-1 px-2 hover:bg-purple-900 hover:text-white'>SIGNUP</button>
+        <div id='main' className='md:h-[130vh] h-[60vh] w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 95%, 50% 100%, 0% 95% , 0 0)" }}>
 
-                <button onClick={toggleNav} className='text-2xl m-2 md:hidden block'>
-                  {navOpen ? <FaXmark /> : <FaBars />}
-                </button>
-
-              </ul>
-            </div>
-            <div id="sideNav" className='md:flex z-20 hidden justify-around items-center w-[100%] mt-5'>
-              <ul className='flex justify-center items-center flex-wrap gap-1 md:gap-5 '>
-                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Home</li>
-                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>About Us</li>
-                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Race Categories</li>
-                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Upcoming Events</li>
-                <li className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Contact Us</li>
-              </ul>
-              <button className='border rounded-md border-purple-900 p-1 px-2 text-purple-900 hover:bg-purple-900 hover:text-white'>Register</button>
-            </div>
-          </nav>
-          <div id="subNav" className={`${navOpen ? "block" : "hidden"} md:hidden w-[100%] h-[70vh] text-right absolute top-18 right-0 bg-white/85 z-20 flex justify-center items-start`}>
-            <ul className='w-[100%] flex justify-center items-center mr-2 flex-col'>
-              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Home</li>
-              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>About Us</li>
-              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Race Categories</li>
-              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Upcoming Events</li>
-              <li className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Contact Us</li>
-              <li className='flex justify-center items-center text-lg hover:animate-bounce my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaFacebookF /> <span className='font-semibold text-sm'>Facebook</span></li>
-              <li className='flex justify-center items-center text-lg hover:animate-bounce my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaTwitter /> <span className='font-semibold text-sm'>Twitter</span></li>
-              <li className='flex justify-center items-center text-lg hover:animate-bounce my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'><AiFillInstagram /> <span className='font-semibold text-sm'>Instagram</span></li>
-            </ul>
-          </div>
+          <Navbar/>
 
           <div className='w-[100%] md:my-16 flex justify-center items-center relative'>
             <div className='flex justify-center items-center w-[90%] md:h-[90vh] h-[50vh]'>
@@ -121,7 +66,7 @@ const Page = () => {
               </Swiper>
             </div>
           </div>
-        </main>
+        </div>
 
 
         <div className=' w-[100%] text-zinc-800 flex justify-evenly items-center flex-col'>
@@ -237,7 +182,7 @@ const Page = () => {
               <p className='capitalize md:my-1 text-sm text-zinc-600'>medical counseling services.</p>
             </div>
           </div>
-          
+
           <span className='text-center mb-4 w-[80%]'>
             <button onClick={toggleData} className='text-purple-900 text-lg md:text-xl font-semibold hover:animate-bounce my-2 hover:border-b-2 border-purple-900'>
               {data ? "See less" : "See more"}
@@ -257,13 +202,13 @@ const Page = () => {
               </ul>
             </span>
           </div>
-          <div className='w-[100%] h-[62%] flex justify-center items-center relative md:flex-row flex-col'>
+          <div className='w-[100%] md:h-[62%] h-[70%] flex justify-center items-center relative md:flex-row flex-col'>
             <div className='md:w-[50%] w-[90%] flex justify-center items-center '>
               <Image src="/registerImg.png" alt="" width={1000} height={1000} className='md:w-[75vh] w-[90%] md:h-auto h-[90%] md:mt-10 mt-20 absolute top-0' style={imageStyle} />
             </div>
             <div className='relative w-[90%] md:w-[35%] md:h-[100%] h-[120%] z-20 md:mt-40 mt-5 rounded-xl flex justify-center items-center'>
               <div className='h-[100%]'>
-                <Image src="/Overlay.png" alt="" width={1000} height={1000} className='md:h-[100%] h-[110%] w-[100%]'/>
+                <Image src="/Overlay.png" alt="" width={1000} height={1000} className='md:h-[100%] h-[110%] w-[100%]' />
               </div>
               <div className='flex justify-start items-center flex-col absolute top-0 left-0'>
                 <h1 className='md:text-4xl text-2xl mt-2 font-bold text-zinc-800'>Registeration form</h1>
@@ -343,11 +288,11 @@ const Page = () => {
         </div>
 
 
-        <div className='md:h-[110vh] h-[120vh] w-[100%] bg-red-200'>
+        <div className='md:h-[110vh] h-auto w-[100%] bg-red-200'>
           <div className='md:h-[25vh] h-[20vh] w-[100%] bg-purple-900 flex justify-center items-center flex-col' style={{ clipPath: "polygon(100% 0%, 100% 75%, 50% 100%, 0% 75% , 0 0)" }}>
             <h1 className='md:text-4xl text-2xl font-bold'>How To Apply</h1>
           </div>
-          <div className='md:h-[60%] h-[100%] w-[100%] relative flex justify-evenly items-center text-zinc-800 md:flex-row flex-col'>
+          <div className='md:h-[60%] h-[100vh] w-[100%] my-2 py-5 relative flex justify-evenly items-center text-zinc-800 md:flex-row flex-col'>
             <div className='flex justify-between items-center flex-col md:h-[70%] h-[45%] z-20 md:w-[30%] w-[85%]'>
               <span className='h-auto m-2 relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-l-4 border-l-8 border-purple-900'>
                 <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>1</span>
@@ -394,24 +339,7 @@ const Page = () => {
               </span>
             </div>
           </div>
-          {/* <hr className='shadow-md  border border-fuchsia-800'/> */}
-          <div className='w-[100%] bg-white shadow-inner shadow-fuchsia-900'>
-            <ul className='flex justify-center items-center gap-2 text-purple-900 pt-5'>
-              <li className='text-sm font-semibold text-center'>
-                <p>Powered By Unity</p>
-                <p>Driven By Trust</p>
-              </li>
-              <li><Image src="/logo.png" alt="" width={200} height={200} className='h-[10vh] w-[10vh]' /></li>
-            </ul>
-            <ul className='flex justify-center items-center gap-5 text-zinc-700 md:text-lg text-sm flex-wrap mt-2 md:mt-6'>
-              <li className='font-semibold border-r-2 border-zinc-700 pr-4'>Home</li>
-              <li className='font-semibold border-r-2 border-zinc-700 pr-4'>About Us</li>
-              <li className='font-semibold border-r-2 border-zinc-700 pr-4'>Race Categories</li>
-              <li className='font-semibold border-r-2 border-zinc-700 pr-4'>Upcoming Events</li>
-              <li className='font-semibold border-zinc-700 pr-4'>Contact Us</li>
-            </ul>
-            <h2 className='font-semibold text-lg text-zinc-800 text-center my-6 pb-3'>Venture by Deshmukh & Gholap</h2>
-          </div>
+          <Footer/>
         </div>
       </div>
     </>
