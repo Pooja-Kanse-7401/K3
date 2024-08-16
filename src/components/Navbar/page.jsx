@@ -44,7 +44,7 @@ const Page = () => {
                         <Link href="/Home" className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Home</Link>
                         <Link href="/About" className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>About Us</Link>
                         <Link href="/RaceCategories" className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Race Categories</Link>
-                        <Link href="" className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Upcoming Events</Link>
+                        <Link href="/Events" className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Upcoming Events</Link>
                         <Link href="" className='font-semibold text-sm hover:animate-bounce hover:text-purple-900 hover:border-t-2 hover:border-purple-900 p-1 pb-2 mt-2'>Contact Us</Link>
                     </ul>
                     <button className='border rounded-md border-purple-900 p-1 px-2 text-purple-900 hover:bg-purple-900 hover:text-white'>Register</button>
