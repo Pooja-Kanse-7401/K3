@@ -55,7 +55,7 @@ const Page = () => {
                     <Link href="/Home" className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Home</Link>
                     <Link href="/About" className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>About Us</Link>
                     <Link href="/RaceCategories" className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Race Categories</Link>
-                    <Link href="" className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Upcoming Events</Link>
+                    <Link href="/Events" className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Upcoming Events</Link>
                     <Link href="" className='font-semibold hover:animate-bounce text-sm my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'>Contact Us</Link>
                     <li className='flex justify-center items-center text-lg hover:animate-bounce my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaFacebookF /> <span className='font-semibold text-sm'>Facebook</span></li>
                     <li className='flex justify-center items-center text-lg hover:animate-bounce my-1 text-purple-900 hover:border-b-2 border-purple-900 p-1'><FaTwitter /> <span className='font-semibold text-sm'>Twitter</span></li>

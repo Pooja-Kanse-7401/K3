@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { CiCalendar, CiLocationOn } from "react-icons/ci";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -34,7 +34,7 @@ const Page = () => {
       <div className='bg-white'>
         <div id='main' className='md:h-[130vh] h-[60vh] w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 95%, 50% 100%, 0% 95% , 0 0)" }}>
 
-          <Navbar/>
+          <Navbar />
 
           <div className='w-[100%] md:my-16 flex justify-center items-center relative'>
             <div className='flex justify-center items-center w-[90%] md:h-[90vh] h-[50vh]'>
@@ -202,11 +202,11 @@ const Page = () => {
               </ul>
             </span>
           </div>
-          <div className='w-[100%] md:h-[62%] h-[70%] flex justify-center items-center relative md:flex-row flex-col'>
+          <div className='w-[100%] md:h-[62%] h-[60%] flex justify-center items-center relative md:flex-row flex-col'>
             <div className='md:w-[50%] w-[90%] flex justify-center items-center '>
               <Image src="/registerImg.png" alt="" width={1000} height={1000} className='md:w-[75vh] w-[90%] md:h-auto h-[90%] md:mt-10 mt-20 absolute top-0' style={imageStyle} />
             </div>
-            <div className='relative w-[90%] md:w-[35%] md:h-[100%] h-[120%] z-20 md:mt-40 mt-5 rounded-xl flex justify-center items-center'>
+            <div className='relative w-[90%] md:w-[35%] md:h-[100%] h-[100%] z-20 md:mt-40 mt-5 rounded-xl flex justify-center items-center'>
               <div className='h-[100%]'>
                 <Image src="/Overlay.png" alt="" width={1000} height={1000} className='md:h-[100%] h-[110%] w-[100%]' />
               </div>
@@ -216,15 +216,17 @@ const Page = () => {
                   <input type="text" name="" id="" placeholder='Name' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none mt-10 text-zinc-950' />
                   <input type="number" name="" id="" placeholder='Phone' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-950' />
                   <input type="email" name="" id="" placeholder='E-mail' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
-                  <input type="number" name="" id="" placeholder='Age' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
-                  <input type="text" name="" id="" placeholder='Gender' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
+                  <span className='flex justify-between items-center w-[100%] gap-6 md:gap-4 my-2'>
+                    <input type="number" name="" id="" placeholder='Age' className=' w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
+                    <input type="text" name="" id="" placeholder='Gender' className=' w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
+                  </span>
                   <textarea name="" id="" rows={5} className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800 '></textarea>
-                  <span className='flex justify-center items-center w-[95%]'>
+                  <span className='flex justify-center items-center w-[95%] my-2'>
                     <input type="checkbox" name="" id="" className='p-6' />
                     <p className='md:text-zinc-700 text-zinc-900 text-sm m-2'>By using this form you agree with the storage and
                       handling of your data by this website.</p>
                   </span>
-                  <button className='border rounded-md border-purple-900 p-1 px-2 text-white bg-purple-900 hover:bg-transparent hover:text-purple-900 w-[100%] mt-2'>Register</button>
+                  <button className='border rounded-md border-purple-900 p-1 px-2 text-white bg-purple-900 hover:bg-transparent hover:text-purple-900 w-[100%] mt-2'>REGISTER</button>
                 </div>
               </div>
             </div>
@@ -339,7 +341,7 @@ const Page = () => {
               </span>
             </div>
           </div>
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </>

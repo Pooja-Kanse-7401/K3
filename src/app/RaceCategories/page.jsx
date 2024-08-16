@@ -11,34 +11,50 @@ const page = () => {
         <div id="main" className='md:h-[80vh] h-[60vh] w-[100%] z-50 bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 85%, 50% 100%, 0% 85% , 0 0)" }}>
           <Navbar />
           <div className='w-[100%] h-[100%] flex justify-center items-center'>
-            <Image src="/image(Race).png" alt="" width={2000} height={2000} className='md:w-[65%] w-[90%] h-[60%] md:h-[90%]' />
+            <Image src="/image(Race).png" alt="" width={2000} height={2000} className='md:w-[65%] w-[90%] h-[80%] md:h-[90%]' />
           </div>
         </div>
-        <div id='cards' className='h-auto w-[100%] bg-white flex justify-center items-center flex-col'>
+        <div id='cards' className='m-5 h-auto w-[100%] bg-white flex justify-center items-center flex-col'>
           <div className='flex justify-center items-center flex-wrap w-[100%] gap-2 md:gap-20 h-[90%] text-zinc-700'>
-            {/* <Image src="/disabled.png" alt="" width={100} height={100} className='w-[25%] m-2' /> */}
             <div className='flex justify-center items-center flex-col md:flex-row w-[100%] gap-2 md:gap-20'>
-              <div className='w-[80%] md:w-[25%] m-1 md:m-4 p-2 px-4 gap-4 flex justify-center items-center flex-col border-8 rounded-3xl border-blue-200'>
-                <h2 className='text-3xl font-bold'>Specialy abled</h2>
-                <p className='text-lg font-semibold'>Registration fees - 300/-</p>
-                <p className='text-lg font-semibold'>Cach Prize - Yes</p>
-                <div>
-                  <span className='font-bold my-4 flex justify-center gap-3 items-center'><span className='font-bold md:text-4xl text-2xl text-purple-900'><CiCalendar /></span>DD/MM/YY</span>
-                  <span className='font-bold my-4'><span className='font-bold md:text-4xl text-2xl text-purple-900'><CiLocationOn /></span></span>
+              
+              <div className='md:w-[25%] w-[100%] relative flex justify-center items-center'>
+                <div className='w-[80%] md:w-[100%] m-1 md:m-4 p-2 px-4 gap-4 flex justify-center items-center flex-col border-8 rounded-3xl border-blue-200'>
+                  <h2 className='text-3xl font-bold'>Specialy abled</h2>
+                  <p className='text-lg font-semibold'>Registration fees - 300/-</p>
+                  <p className='text-lg font-semibold'>Cach Prize - Yes</p>
+                  <div>
+                    <span className='font-bold my-4 flex justify-center gap-3 items-center'><span className='font-bold md:text-4xl text-2xl text-purple-900'><CiCalendar /></span>DD/MM/YY</span>
+                    <span className='font-bold my-4'><span className='font-bold md:text-4xl text-2xl text-purple-900'><CiLocationOn /></span></span>
+                  </div>
+                  <button className='border-2 w-[100%] rounded-md border-blue-500 hover:font-semibold hover:bg-transparent hover:text-blue-900 p-1 px-2 bg-blue-500 text-white'>REGISTER</button>
                 </div>
-                <button className='border-2 w-[100%] rounded-md border-blue-500 hover:font-semibold hover:bg-transparent hover:text-blue-900 p-1 px-2 bg-blue-500 text-white'>REGISTER</button>
+                {/* <div className='w-[80%] absolute top-2 left-5 md:w-[90%] h-[43vh] rounded-3xl border-8 border-blue-400 bg-blue-200 flex justify-center items-center flex-col'>
+                  <Image src="/disabled.png" alt="" width={100} height={100} className='w-[25%] m-2' />
+                  <h2 className='text-3xl font-bold'>Specialy abled</h2>
+                </div> */}
               </div>
-              <div className='w-[80%] md:w-[25%] m-1 md:m-4 p-2 px-4 gap-4 flex justify-center items-center flex-col border-8 rounded-3xl border-fuchsia-900'>
-                <h2 className='text-3xl font-bold'>5 Kms</h2>
-                <p className='text-lg font-semibold'>Registration fees - 300/-</p>
-                <p className='text-lg font-semibold'>Cach Prize - Yes</p>
-                <div>
-                  <span className='font-bold my-4 flex justify-center gap-3 items-center'><span className='font-bold md:text-4xl text-2xl text-purple-900'><CiCalendar /></span>DD/MM/YY</span>
-                  <span className='font-bold my-4'><span className='font-bold md:text-4xl text-2xl text-purple-900'><CiLocationOn /></span></span>
+
+
+              <div className='md:w-[25%] w-[100%] relative flex justify-center items-center'>
+                <div className='w-[80%] md:w-[100%] m-1 md:m-4 p-2 px-4 gap-4 flex justify-center items-center flex-col border-8 rounded-3xl border-fuchsia-900'>
+                  <h2 className='text-3xl font-bold'>5 Kms</h2>
+                  <p className='text-lg font-semibold'>Registration fees - 300/-</p>
+                  <p className='text-lg font-semibold'>Cach Prize - Yes</p>
+                  <div>
+                    <span className='font-bold my-4 flex justify-center gap-3 items-center'><span className='font-bold md:text-4xl text-2xl text-purple-900'><CiCalendar /></span>DD/MM/YY</span>
+                    <span className='font-bold my-4'><span className='font-bold md:text-4xl text-2xl text-purple-900'><CiLocationOn /></span></span>
+                  </div>
+                  <button className='border-2 w-[100%] rounded-md border-fuchsia-900 hover:font-semibold hover:bg-transparent hover:text-fuchsia-900 p-1 px-2 bg-fuchsia-900 text-white'>REGISTER</button>
                 </div>
-                <button className='border-2 w-[100%] rounded-md border-fuchsia-900 hover:font-semibold hover:bg-transparent hover:text-fuchsia-900 p-1 px-2 bg-fuchsia-900 text-white'>REGISTER</button>
+                {/* <div className='w-[80%] absolute top-4 left-5 hidden md:w-[90%] h-[47vh] rounded-3xl bg-fuchsia-300 border-8 border-fuchsia-900 md:flex justify-center items-center flex-col'>
+                  <Image src="/Jogging.png" alt="" width={100} height={100} className='w-[25%] m-2' />
+                  <h2 className='text-3xl text-fuchsia-900 font-bold'>Specialy abled</h2>
+                </div> */}
               </div>
             </div>
+
+
 
             <div className='w-[80%] md:w-[25%] m-1 md:m-4 p-2 px-4 gap-6 flex justify-center items-center flex-col border-8 rounded-3xl border-red-600'>
               <Image src="/running (2).png" alt="" width={100} height={100} className='w-[25%] m-2' />
@@ -54,7 +70,7 @@ const page = () => {
               <p className='text-lg'>Cach Prize - No</p>
               <button className='border-2 w-[100%] rounded-md border-purple-500 hover:font-semibold hover:bg-transparent hover:text-purple-900 p-1 px-2 bg-purple-500 text-white'>REGISTER</button>
             </div>
-            
+
             <div className='w-[80%] md:w-[25%] m-1 md:m-4 p-2 px-4 gap-6 flex justify-center items-center flex-col border-8 rounded-3xl border-red-500'>
               <Image src="/Athlete.png" alt="" width={100} height={100} className='w-[25%] m-2' />
               <h2 className='text-2xl font-bold'>10 Kms</h2>
@@ -62,7 +78,7 @@ const page = () => {
               <p className='text-lg'>Cach Prize - Yes</p>
               <button className='border-2 w-[100%] rounded-md border-red-500 hover:font-semibold hover:bg-transparent hover:text-red-500 p-1 px-2 bg-red-500 text-white'>REGISTER</button>
             </div>
-            
+
             <div className='w-[80%] md:w-[25%] m-1 md:m-4 p-2 px-4 gap-6 flex justify-center items-center flex-col border-8 rounded-3xl border-purple-900'>
               <Image src="/running.png" alt="" width={100} height={100} className='w-[25%] m-2' />
               <h2 className='text-2xl font-bold'>21 Kms</h2>
@@ -79,7 +95,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   )

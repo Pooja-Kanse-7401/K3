@@ -15,7 +15,7 @@ const Page = () => {
                     <Navbar/>
 
                     <div className='w-[100%] h-[80%] flex justify-center items-center'>
-                        <Image src="/image(about).png" alt="" width={2000} height={2000} className='md:w-[65%] w-[90%] h-[60%] md:h-[80%]' />
+                        <Image src="/image(about).png" alt="" width={2000} height={2000} className='md:w-[65%] w-[90%] h-[80%] md:h-[80%]' />
                     </div>
                 </div>
                 <div id="vision" className='w-[100%] md:h-[90vh] text-zinc-800 flex justify-evenly items-center flex-col'>
