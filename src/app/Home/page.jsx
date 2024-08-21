@@ -97,41 +97,41 @@ const Page = () => {
               <span className='flex justify-center items-end'>
                 <Image src="/img3.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
-              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Water for participants</h2>
-              <p className='capitalize text-sm md:my-1 text-zinc-600'>Stay hydrated and energized </p>
-              <p className='capitalize text-sm md:my-1 text-zinc-600'>throughout your marathon</p>
-              <p className='capitalize text-sm md:my-1 text-zinc-600'>journey with our dedicated water </p>
-              <p className='capitalize text-sm md:my-1 text-zinc-600'>bottle support stations.</p>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Medical staff</h2>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>Our experienced medical staff</p>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>will be stationed throughout </p>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>the marathon course & assist</p>
+              <p className='capitalize text-sm md:my-1 text-zinc-600'>with any health concerns.</p>
             </div>
             <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img4.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
-              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Water for participants</h2>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>Stay hydrated and energized </p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>throughout your marathon</p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>journey with our dedicated water </p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>bottle support stations.</p>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Medal, Cash prize & certificate</h2>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>Top finishers in various categories will </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>also be awarded cash prizes which add</p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>an extra layer of excitement and </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>motivation.</p>
             </div>
             <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img5.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
-              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Water for participants</h2>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>Stay hydrated and energized </p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>throughout your marathon</p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>journey with our dedicated water </p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>bottle support stations.</p>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Beverages for participants</h2>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>Along the marathon route and at the </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>finish line, you'll find water and other </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>refreshments to keep you hydrated and</p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>fueled.</p>
             </div>
             <div className='w-[90%] md:w-[30%] text-center m-1 md:m-2'>
               <span className='flex justify-center items-end'>
                 <Image src="/img6.png" alt="" height={1000} width={1000} className='md:w-[9vh] w-[6vh]' />
               </span>
-              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Water for participants</h2>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>Stay hydrated and energized </p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>throughout your marathon</p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>journey with our dedicated water </p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>bottle support stations.</p>
+              <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Nutritional Consultation</h2>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>Our team of nutritionists is available to  </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>provide dietary advice tailored to your </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>training needs and goals. Get insights </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>needed to run your best race!</p>
             </div>
           </div>
 
