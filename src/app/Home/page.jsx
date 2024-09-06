@@ -122,7 +122,7 @@ const Page = () => {
               </span>
               <h2 className='md:text-2xl text-lg font-semibold my-2 md:my-5'>Beverages for participants</h2>
               <p className='capitalize md:my-1 text-sm text-zinc-600'>Along the marathon route and at the </p>
-              <p className='capitalize md:my-1 text-sm text-zinc-600'>finish line, you'll find water and other </p>
+              <p className='capitalize md:my-1 text-sm text-zinc-600'>finish line, you&apos;ll find water and other </p>
               <p className='capitalize md:my-1 text-sm text-zinc-600'>refreshments to keep you hydrated and</p>
               <p className='capitalize md:my-1 text-sm text-zinc-600'>fueled.</p>
             </div>
@@ -210,9 +210,6 @@ const Page = () => {
               <Image src="/registerImg.png" alt="" width={1000} height={1000} className='md:w-auto w-[90%] md:h-[95%] h-[90%] md:mt-10 mt-20 absolute top-0' style={imageStyle} />
             </div>
             <div className='relative w-[90%] md:m-10 md:h-auto h-[100%] z-20 mt-5 rounded-xl flex justify-center items-center'>
-              {/* <div className='h-[100%]'>
-                <Image src="/Overlay.png" alt="" width={1000} height={1000} className='md:h-[100vh] h-[110%] w-[80vw]' />
-              </div> */}
               <div className='flex justify-center items-center flex-col bg-white/50 md:bg-gradient-to-br from-indigo-300 via-yellow-100 to-red-300 rounded-2xl'>
                 <h1 className='md:text-4xl text-2xl font-bold text-zinc-800'>Registeration form</h1>
                 <div className='flex justify-center items-center flex-col py-4 w-[90%]'>

@@ -31,7 +31,7 @@ const Page = () => {
                             <button className='border rounded-xl border-purple-900 p-3 px-2 text-white bg-purple-900 hover:bg-red-100 hover:text-purple-900 w-[100%] mt-4 font-bold'>LOGIN</button>
                             <span className='flex justify-between items-center'>
                                 <Link href="" className='text-purple-900 font-semibold'>Forget Password</Link>
-                                <p className='text-zinc-900 font-semibold my-4 text-center'>Don't have an account?  <Link href="" className='text-purple-900 font-bold p-2'> Create Account</Link></p>
+                                <p className='text-zinc-900 font-semibold my-4 text-center'>Don&apos;t have an account?  <Link href="" className='text-purple-900 font-bold p-2'> Create Account</Link></p>
                             </span>
                             <span className='flex justify-center items-center gap-4'>
                                 <hr className='w-[45%] h-[2px] bg-stone-400' />
