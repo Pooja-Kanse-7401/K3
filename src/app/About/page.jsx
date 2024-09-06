@@ -11,14 +11,14 @@ const Page = () => {
     return (
         <>
             <div className='bg-white'>
-                <div id='main' className='md:h-[100vh] h-[60vh] w-[100%] z-50 bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 95%, 50% 100%, 0% 95% , 0 0)" }}>
-                    <Navbar/>
+                <div id='main' className=' md:h-[auto] h-[60vh] w-[100%] z-50 bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 90%, 50% 100%, 0% 90% , 0 0)" }}>
+                    <Navbar />
 
-                    <div className='w-[100%] h-[80%] flex justify-center items-center'>
-                        <Image src="/image(about).png" alt="" width={2000} height={2000} className='md:w-[65%] w-[90%] h-[80%] md:h-[80%]' />
+                    <div className='w-[100%] h-[70vh] flex justify-center items-center'>
+                        <Image src="/image(about).png" alt="" width={2000} height={2000} className='md:w-[65%] w-[90%] h-[80%] md:h-[80%]' style={{ clipPath: "polygon(100% 0%, 100% 90%, 50% 100%, 0% 90% , 0 0)" }} />
                     </div>
                 </div>
-                <div id="vision" className='w-[100%] md:h-[90vh] text-zinc-800 flex justify-evenly items-center flex-col'>
+                <div id="vision" className='w-[100%] md:h-auto my-2 text-zinc-800 flex justify-evenly items-center flex-col'>
                     <div className='md:w-[70%] w-[90%] flex justify-start items-center flex-col'>
                         <h1 className='md:text-4xl text-2xl mt-10 font-bold text-center'>K3&apos;s Vision</h1>
                         <p className='m-5 md:text-base text-sm'>
@@ -50,8 +50,8 @@ const Page = () => {
                         </ul>
                     </div>
                 </div>
-                <div id='events' className='h-[45vh] w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 70%, 50% 100%, 0% 70% , 0 0)" }}>
-                    <div className='md:h-[40vh] h-[40vh] w-[100%] bg-purple-900 flex justify-start pt-5 items-center flex-col' style={{ clipPath: "polygon(100% 0%, 100% 65%, 50% 100%, 0% 65% , 0 0)" }}>
+                <div id='events' className='h-auto pb-10 w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 70%, 50% 100%, 0% 70% , 0 0)" }}>
+                    <div className='md:h-auto py-10 h-[40vh] w-[100%] bg-purple-900 flex justify-start pt-5 items-center flex-col' style={{ clipPath: "polygon(100% 0%, 100% 65%, 50% 100%, 0% 65% , 0 0)" }}>
                         <h1 className='md:text-4xl text-xl text-center font-bold'>Do Join Us with Our Upcoming Event!!!</h1>
                         <span className='flex justify-between items-center gap-2 w-[80%] md:w-[60%] mt-[4%]'>
                             <p className='md:text-2xl text-md font-semibold'>Upcoming Event: </p>
@@ -84,8 +84,8 @@ const Page = () => {
                         </span>
                     </div>
                 </div>
-                
-                <Footer/>
+
+                <Footer />
             </div>
         </>
     )

@@ -1,0 +1,10 @@
+.Front {
+    z-index: 1;
+}
+.Back {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.CardBody:hover .Back{
+    transform: rotateY(180deg);
+}

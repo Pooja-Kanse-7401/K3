@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { CiCalendar, CiLocationOn } from "react-icons/ci";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { RiDeleteBinLine } from "react-icons/ri";
 
 import Navbar from "@/components/Navbar/page.jsx"
 import Footer from "@/components/Footer/page.jsx"
@@ -32,12 +33,14 @@ const Page = () => {
   return (
     <>
       <div className='bg-white'>
-        <div id='main' className='md:h-[130vh] h-[60vh] w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 95%, 50% 100%, 0% 95% , 0 0)" }}>
+        <div id='main' className='md:h-auto h-[60vh] w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 95%, 50% 100%, 0% 95% , 0 0)" }}>
 
           <Navbar />
 
+          <Image src="/Overlay.png" alt="" height={200} width={200} className='h-[3vh] w-[100%] mt-3' />
+
           <div className='w-[100%] md:my-16 flex justify-center items-center relative'>
-            <div className='flex justify-center items-center w-[90%] md:h-[90vh] h-[50vh]'>
+            <div className='flex justify-center items-center w-[90%] md:h-auto my-5 h-[50vh]'>
               <Swiper
                 spaceBetween={38}
                 centeredSlides={true}
@@ -191,8 +194,8 @@ const Page = () => {
         </div>
 
 
-        <div className='h-[170vh] w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 95%, 50% 100%, 0% 95% , 0 0)" }}>
-          <div className='md:h-[30vh] h-[25vh] w-[100%] bg-purple-900 flex justify-start pt-5 items-center flex-col' style={{ clipPath: "polygon(100% 0%, 100% 75%, 50% 100%, 0% 75% , 0 0)" }}>
+        <div className='h-auto pb-20 md:pb-40 w-[100%] bg-red-200' style={{ clipPath: "polygon(100% 0%, 100% 95%, 50% 100%, 0% 95% , 0 0)" }}>
+          <div className='md:h-auto md:pb-12 h-[25vh] w-[100%] bg-purple-900 flex justify-start pt-5 items-center flex-col' style={{ clipPath: "polygon(100% 0%, 100% 75%, 50% 100%, 0% 75% , 0 0)" }}>
             <h1 className='md:text-4xl text-xl font-bold'>Run with Purpose, Finish With Pride</h1>
             <span className='flex justify-between items-center gap-2 w-[80%] md:w-[60%] mt-[4%]'>
               <p className='md:text-2xl text-md font-semibold'>Upcoming Event: </p>
@@ -202,31 +205,77 @@ const Page = () => {
               </ul>
             </span>
           </div>
-          <div className='w-[100%] md:h-[62%] h-[60%] flex justify-center items-center relative md:flex-row flex-col'>
+          <div className='w-[100%] md:h-[62%] h-[60%] flex justify-start items-center relative md:flex-row flex-col'>
             <div className='md:w-[50%] w-[90%] flex justify-center items-center '>
-              <Image src="/registerImg.png" alt="" width={1000} height={1000} className='md:w-[75vh] w-[90%] md:h-auto h-[90%] md:mt-10 mt-20 absolute top-0' style={imageStyle} />
+              <Image src="/registerImg.png" alt="" width={1000} height={1000} className='md:w-auto w-[90%] md:h-[95%] h-[90%] md:mt-10 mt-20 absolute top-0' style={imageStyle} />
             </div>
-            <div className='relative w-[90%] md:w-[35%] md:h-[100%] h-[100%] z-20 md:mt-40 mt-5 rounded-xl flex justify-center items-center'>
-              <div className='h-[100%]'>
-                <Image src="/Overlay.png" alt="" width={1000} height={1000} className='md:h-[100%] h-[110%] w-[100%]' />
-              </div>
-              <div className='flex justify-start items-center flex-col absolute top-0 left-0'>
-                <h1 className='md:text-4xl text-2xl mt-2 font-bold text-zinc-800'>Registeration form</h1>
-                <div className='flex justify-center items-center flex-col py-4 w-[80%]'>
-                  <input type="text" name="" id="" placeholder='Name' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none mt-10 text-zinc-950' />
-                  <input type="number" name="" id="" placeholder='Phone' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-950' />
-                  <input type="email" name="" id="" placeholder='E-mail' className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
-                  <span className='flex justify-between items-center w-[100%] gap-6 md:gap-4 my-2'>
-                    <input type="number" name="" id="" placeholder='Age' className=' w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
-                    <input type="text" name="" id="" placeholder='Gender' className=' w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
+            <div className='relative w-[90%] md:m-10 md:h-auto h-[100%] z-20 mt-5 rounded-xl flex justify-center items-center'>
+              {/* <div className='h-[100%]'>
+                <Image src="/Overlay.png" alt="" width={1000} height={1000} className='md:h-[100vh] h-[110%] w-[80vw]' />
+              </div> */}
+              <div className='flex justify-center items-center flex-col bg-white/50 md:bg-gradient-to-br from-indigo-300 via-yellow-100 to-red-300 rounded-2xl'>
+                <h1 className='md:text-4xl text-2xl font-bold text-zinc-800'>Registeration form</h1>
+                <div className='flex justify-center items-center flex-col py-4 w-[90%]'>
+                  <span className='md:text-base text-xs flex justify-between items-start  md:flex-row flex-col w-[100%] gap-2 md:gap-2 my-1'>
+                    <span className='flex justify-start flex-wrap md:flex-nowrap items-center gap-2'>
+                    <input type="text" name="" id="" placeholder='Participant 1 Name' className=' w-[50%] rounded-md p-3  px-5 outline-none text-zinc-950' />
+                      <input type="number" name="" id="" placeholder='Age' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="text" name="" id="" placeholder='Gender' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Height' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Weight' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <button className='text-purple-900 text-2xl'><RiDeleteBinLine /></button>
+                    </span>
                   </span>
-                  <textarea name="" id="" rows={5} className='md:m-2 m-4 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800 '></textarea>
-                  <span className='flex justify-center items-center w-[95%] my-2'>
-                    <input type="checkbox" name="" id="" className='p-6' />
-                    <p className='md:text-zinc-700 text-zinc-900 text-sm m-2'>By using this form you agree with the storage and
+                  <span className='md:text-base text-xs flex justify-between items-start md:flex-row flex-col w-[100%] gap-2 md:gap-2 my-1'>
+                    <span className='flex justify-start flex-wrap md:flex-nowrap items-center gap-2'>
+                    <input type="text" name="" id="" placeholder='Participant 2 Name' className=' w-[50%] rounded-md p-3  px-5 outline-none text-zinc-950' />
+                      <input type="number" name="" id="" placeholder='Age' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="text" name="" id="" placeholder='Gender' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Height' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Weight' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <button className='text-purple-900 text-2xl'><RiDeleteBinLine /></button>
+                    </span>
+                  </span>
+                  <span className='md:text-base text-xs flex justify-between items-start md:flex-row flex-col w-[100%] gap-2 md:gap-2 my-1'>
+                    <span className='flex justify-start flex-wrap md:flex-nowrap items-center gap-2'>
+                    <input type="text" name="" id="" placeholder='Participant 3 Name' className=' w-[50%] rounded-md p-3  px-5 outline-none text-zinc-950' />
+                      <input type="number" name="" id="" placeholder='Age' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="text" name="" id="" placeholder='Gender' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Height' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Weight' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <button className='text-purple-900 text-2xl'><RiDeleteBinLine /></button>
+                    </span>
+                  </span>
+                  <span className='md:text-base text-xs flex justify-between items-start md:flex-row flex-col w-[100%] gap-2 md:gap-2 my-1'>
+                    <span className='flex justify-start flex-wrap md:flex-nowrap items-center gap-2'>
+                    <input type="text" name="" id="" placeholder='Participant 4 Name' className=' w-[50%] rounded-md p-3  px-5 outline-none text-zinc-950' />
+                      <input type="number" name="" id="" placeholder='Age' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="text" name="" id="" placeholder='Gender' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Height' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Weight' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <button className='text-purple-900 text-2xl'><RiDeleteBinLine /></button>
+                    </span>
+                  </span>
+                  <span className='md:text-base text-xs flex justify-between items-start md:flex-row flex-col w-[100%] gap-2 md:gap-2 my-1'>
+                    <span className='flex justify-start flex-wrap md:flex-nowrap items-center gap-2'>
+                    <input type="text" name="" id="" placeholder='Participant 5 Name' className=' w-[50%] rounded-md p-3  px-5 outline-none text-zinc-950' />
+                      <input type="number" name="" id="" placeholder='Age' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="text" name="" id="" placeholder='Gender' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Height' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <input type="number" name="" id="" placeholder='Weight' className=' w-[40%] rounded-md p-3  px-2 outline-none text-zinc-800' />
+                      <button className='text-purple-900 text-2xl'><RiDeleteBinLine /></button>
+                    </span>
+                  </span>
+                  <input type="number" name="" id="" placeholder='Phone' className='m-1 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-950' />
+                  <input type="email" name="" id="" placeholder='E-mail' className='m-1 w-[100%] rounded-md p-3  px-5 outline-none text-zinc-800' />
+
+                  <span className='flex justify-start items-center w-[100%] my-1 rounded-md bg-white  px-6'>
+                    <input type="checkbox" name="" id="" className='scale-150' />
+                    <p className='md:text-zinc-700 text-zinc-900 text-sm m-4 w-[60%]'>By using this form you agree with the storage and
                       handling of your data by this website.</p>
                   </span>
-                  <button className='border rounded-md border-purple-900 p-1 px-2 text-white bg-purple-900 hover:bg-transparent hover:text-purple-900 w-[100%] mt-2'>REGISTER</button>
+
+                  <button className='border rounded-md border-purple-900 p-2 px-2 text-white bg-purple-900 hover:bg-red-100 hover:text-purple-900 w-[100%] md:w-[50%] mt-4'>PROCEED FOR PAYMENT</button>
                 </div>
               </div>
             </div>
@@ -234,7 +283,7 @@ const Page = () => {
         </div>
 
 
-        <div className='h-[200vh] md:h-[120vh] w-[100%] bg-white flex justify-center items-center flex-col'>
+        <div className='h-[200vh] md:h-auto py-5 w-[100%] bg-white flex justify-center items-center flex-col'>
           <h1 className='md:text-4xl text-2xl font-bold text-zinc-700 text-center m-3'>Race Categories</h1>
           <div className='flex justify-center items-center flex-wrap w-[100%] h-[90%] text-zinc-700'>
             <div className='w-[44%] md:w-[20%] m-1 md:m-4 p-2 px-4 gap-4 flex justify-center items-center flex-col border-8 rounded-xl border-pink-200'>
@@ -290,13 +339,13 @@ const Page = () => {
         </div>
 
 
-        <div className='md:h-[110vh] h-auto w-[100%] bg-red-200'>
-          <div className='md:h-[25vh] h-[20vh] w-[100%] bg-purple-900 flex justify-center items-center flex-col' style={{ clipPath: "polygon(100% 0%, 100% 75%, 50% 100%, 0% 75% , 0 0)" }}>
+        <div className='md:h-auto h-auto w-[100%] bg-red-200'>
+          <div className='h-[20vh] w-[100%] bg-purple-900 flex justify-center items-center flex-col' style={{ clipPath: "polygon(100% 0%, 100% 75%, 50% 100%, 0% 75% , 0 0)" }}>
             <h1 className='md:text-4xl text-2xl font-bold'>How To Apply</h1>
           </div>
-          <div className='md:h-[60%] h-[100vh] w-[100%] my-2 py-5 relative flex justify-evenly items-center text-zinc-800 md:flex-row flex-col'>
-            <div className='flex justify-between items-center flex-col md:h-[70%] h-[45%] z-20 md:w-[30%] w-[85%]'>
-              <span className='h-auto m-2 relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-l-4 border-l-8 border-purple-900'>
+          <div className='md:h-auto h-[100vh] w-[100%] my-2 py-5 relative flex justify-evenly items-center text-zinc-800 md:flex-row flex-col'>
+            <div className='flex justify-between items-center flex-col md:h-[70%] h-[45%] z-20 gap-6 md:w-[30%] w-[85%]'>
+              <span className='p-4 h-auto m-2 relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-l-4 border-l-8 border-purple-900'>
                 <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>1</span>
                 <div className='flex justify-center items-center flex-col gap-2 pt-5'>
                   <span className='flex justify-center items-center gap-2 pl-7'>
@@ -306,7 +355,7 @@ const Page = () => {
                   <p className='w-[80%] text-center md:text-md text-sm'>Go to the Registration Page registration page link on our website and fill the form.</p>
                 </div>
               </span>
-              <span className='h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-l-4 border-l-8 border-purple-900'>
+              <span className='p-4 h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-l-4 border-l-8 border-purple-900'>
                 <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>2</span>
                 <div className='flex justify-center items-center flex-col gap-2 pt-5'>
                   <span className='flex justify-center items-center gap-2 pl-7'>
@@ -318,8 +367,8 @@ const Page = () => {
               </span>
             </div>
             <Image src="/footerImg.png" alt="" height={300} width={300} className='rounded-3xl md:w-[25%] w-[90%] h-[100%] md:h-auto md:relative absolute top-0 z-10' />
-            <div className='flex justify-between items-center flex-col md:h-[70%] h-[45%] z-20 md:w-[30%] w-[85%]'>
-              <span className='h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-r-4 border-l-8 md:border-l-0 border-purple-900'>
+            <div className='flex justify-between items-center flex-col gap-6 md:h-[70%] h-[45%] z-20 md:w-[30%] w-[85%]'>
+              <span className='p-4 h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-r-4 border-l-8 md:border-l-0 border-purple-900'>
                 <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>3</span>
                 <div className='flex justify-center items-center flex-col gap-3 pt-5'>
                   <span className='flex justify-center items-center gap-2 pl-7'>
@@ -329,7 +378,7 @@ const Page = () => {
                   <p className='w-[80%] text-center md:text-md text-sm'>Review registration fee, Select your payment method.</p>
                 </div>
               </span>
-              <span className='h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-r-4 border-l-8 md:border-l-0 border-purple-900'>
+              <span className='p-4 h-[45%] relative w-[98%] md:bg-red-100 bg-white/90 rounded-2xl md:border-r-4 border-l-8 md:border-l-0 border-purple-900'>
                 <span className='absolute top-[34%] left-[-24px] p-2 bg-purple-900 w-[6vh] h-[6vh] md:w-[7vh] md:h-[7vh] text-white md:text-2xl text-lg font-bold rounded-full flex justify-center items-center'>4</span>
                 <div className='flex justify-center items-center flex-col gap-3 pt-5'>
                   <span className='flex justify-center items-center gap-2 pl-7'>
